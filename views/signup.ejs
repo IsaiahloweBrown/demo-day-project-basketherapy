@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+    <title>Basketherapy</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-fixed">
+<section class="container">
+<section class="col-sm-6 col-sm-offset-3">
+    
+    <section class="grid text-center ">
+        
+        <section class="g-col-6">
+            <!-- <img class="logo"src="../img/b-logo.png"   alt="basketherapy-logo"> -->
+        </section>
+        <section class="sign-up-header g-col-6">
+         
+            <h1><span class="fa fa-sign-in"></span> Sign Up</h1>
+            <p>Already ballin? <a class="sign-in-link"href="/login">Sign In</a></p>
+        </section>
+       
+    </section>
+
+    <% if (message.length > 0) { %>
+        <section class="alert alert-danger"><%= message %></section>
+    <% } %>
+
+    <!-- LOGIN FORM -->
+    <section class="card">
+        <form action="/signup" method="post">
+            <section class="form-group">
+                <label class="email">Email</label>
+                <input type="text" class="form-control" name="email" required>
+            </section>
+            <section class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" name="password" required>
+            </section>
+            <button type="submit" class="btn btn-warning btn-lg ">Sign Up</button>
+        </form>
+    </section>
+
+ 
+     
+  
+
+    <hr>
+
+    
+    <!-- <p>Or go <a href="/">home</a>.</p> -->
+
+</section>
+</section>
+</body>
+</html>

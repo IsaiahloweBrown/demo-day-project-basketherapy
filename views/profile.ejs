@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+    <title>Create Game</title>
+    <!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.38.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+
+    <!-- <section class="page-header text-center">
+        <h1><span class="fa fa-anchor"></span> Profile Page</h1>
+        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+    </section> -->
+
+
+
+        <!-- LOCAL INFORMATION -->
+        <!-- <section class="col-sm-6">
+            <section class="well">
+                <h3><span class="fa fa-user"></span> Local</h3>
+
+                <% if (user.local.email) { %>
+                    <p>
+                        <strong>id</strong>: <%= user._id %><br>
+                        <strong>email</strong>: <%= user.local.email %><br>
+                        <strong>password</strong>: <%= user.local.password %>
+                    </p>
+
+                    <a href="/unlink/local" class="btn btn-default">Unlink</a>
+                <% } else { %>
+                    <a href="/connect/local" class="btn btn-default">Connect Local</a>
+                <% } %>
+
+            </section>
+        </section> -->
+        <header>
+          <section class="navbar bg-orange-400">
+              <section class="flex-1">
+                <a class="btn btn-ghost normal-case text-xl text-white"> <img class="logo-sm" src="./img/b-logo.png"><span class="text-black">Baske<span class="text-white">therapy</span</span></a>
+              </section>
+              <section class="flex-none">
+                <section class="avatar">
+                  <section class="w-12 rounded-full">
+                    <img src="https://placeimg.com/192/192/people" />
+                  </section>
+                </section>
+              </section>
+            </section>
+         </header>
+
+
+       
+
+        <section class="text-center">
+
+
+          <section class="text-black ">
+            <h2>Create a Game</h2>
+          </section>
+        
+          <% if (user.local.email) { %>
+            <form class=""action="/create" method="POST">
+              <section class="mb-4 mx-32">
+                <label for="base-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Name</label>
+                <input type="text" name="name" id="base-input" class="bg-gray-50 w-32  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+              </section>
+              <section class="mb-4 mx-32">
+                <label for="base-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Location</label>
+                <input type="text" name="location" id="base-input" class="bg-gray-50 w-32  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+              </section>
+              <section class="mb-4 mx-32">
+                <label for="base-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Date & Time</label>
+                <input type="datetime-local" name="dateAndTime" id="base-input" class="bg-gray-50 w-32  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+              </section>
+              <section class="mb-4 mx-32">
+                <label for="base-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Type of Game</label>
+                <input type="text" name="gameType" id="base-input" class="bg-gray-50 w-32  border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+              </section>
+        
+              <button class="btn text-orange-400" type="submit">Submit</button>
+            </form>
+        </section>
+          <% } %>
+
+
+
+
+<script src="main.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+
+</body>
+</html>
