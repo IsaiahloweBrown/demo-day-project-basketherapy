@@ -1,3 +1,45 @@
+const axios = require('axios');
+
+
+
+// set up the request parameters
+const params = {
+  api_key: "B52F793A4A924FE49B90955F80199554",
+  search_type: "places",
+  q: "basketball court",
+  location: 'Philadelphia,PA,United States'
+}
+
+// make the http GET request to Scale SERP
+axios.get('https://api.scaleserp.com/search', { params })
+  .then(response => {
+
+    // print the JSON response from Scale SERP
+    
+    console.log(JSON.stringify(response.data.places_results, 0, 2));
+    let results = JSON.stringify(response.data.places_results)
+    let titles = []
+    let addresses = [] 
+    for(i=0; i<18; i++) {
+      let itemTitle = JSON.stringify(response.data.places_results[i].title)
+      let itemAddress = JSON.stringify(response.data.places_results[i].address)
+      if(itemTitle !== "Baketball Court") {
+        titles.push(itemTitle)
+        addresses.push(itemAddress)
+      }
+    }
+    console.log(JSON.stringify(response.data.places_results[0].title))
+    // console.log(address)
+    console.log(results.length)
+    console.log(titles)
+
+  }).catch(error => {
+    // catch and print the error
+    console.log(error);
+
+     
+  })
+
 module.exports = function(app, passport, db) {
 
 // normal routes ===============================================================
@@ -11,6 +53,7 @@ module.exports = function(app, passport, db) {
     app.get('/profile', isLoggedIn, function(req, res) {
         db.collection('games').find().toArray((err, result) => {
           if (err) return console.log(err)
+          //change ejs page to All Games 
           res.render('profile.ejs', {
             user : req.user,
             games: result
@@ -18,7 +61,7 @@ module.exports = function(app, passport, db) {
           
         })
     });
-
+    //if games === "user"
     // LOGOUT ==============================
     // app.get('/logout', function(req, res) {
     //     req.logout();
@@ -36,6 +79,8 @@ module.exports = function(app, passport, db) {
 // message board routes ===============================================================
 
     app.post('/create', (req, res) => {
+   
+  
       db.collection('games').save({name: req.body.name, location: req.body.location, dateAndTime: req.body.dateAndTime, gameType: req.body.gameType, participants: null}, (err, result) => {
         if (err) return console.log(err)
         console.log('saved to database')

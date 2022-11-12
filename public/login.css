@@ -1,4 +1,5 @@
 :root {
+   
     word-wrap:break-word;
     background-image: linear-gradient(
       to right,
@@ -48,7 +49,7 @@
     border: 3px solid black;
   }
   body{
-   
+    padding-top: 130px;
     word-wrap:break-word;
     background-image: linear-gradient(
       to right,
@@ -113,18 +114,3 @@
   /* form input {
     background: gray;
   } */
-  Footer
-  © 2022 GitHub, Inc.
-  Footer navigation
-  Terms
-  Privacy
-  Security
-  Status
-  Docs
-  Contact GitHub
-  Pricing
-  API
-  Training
-  Blog
-  About
-  
