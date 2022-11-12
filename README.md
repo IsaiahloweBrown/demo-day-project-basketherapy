@@ -2,7 +2,7 @@
 
 ![image](https://user-images.githubusercontent.com/112201564/201456341-e7db1770-3878-4568-9425-6784f470ae20.png)
 
-I made matching card game based on Legend of Runterra(League of Legends Lore)
+I made Pomodoro tracker that tracks your pomodoro goals and sessions
 
 **Link to project:** coming soon
 
