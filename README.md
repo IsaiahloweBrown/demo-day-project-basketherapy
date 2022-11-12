@@ -13,7 +13,7 @@ I am currently making a Pickup game finder called Basketherapy
 
 ## Additional Features:
 
-!![image](https://user-images.githubusercontent.com/112201564/201456947-2b833f69-9baa-4c1f-895f-59dea154a3c6.png)
+![image](https://user-images.githubusercontent.com/112201564/201456947-2b833f69-9baa-4c1f-895f-59dea154a3c6.png)
 
 - Find Pickup Games in your city
 - Create and Join games 
